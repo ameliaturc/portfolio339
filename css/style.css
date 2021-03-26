@@ -98,18 +98,29 @@ footer {
     text-align: center;
 }
 
-div.mtp {
-    background-color: #fff5ef
+div.mtp, div.gd {
+    background-color: #fff5ef;
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-div.gd {
-    background-color: #fff5ef
+div.brag.house {
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 button {
     color:black; 
     font: bold;
-    background-color:#fed; 
+    background-color:#fff5ef; 
     border:1px solid; 
     border-color: black; 
     border-radius: 5%;
