@@ -12,22 +12,74 @@
 }
 
 header{
-    border: 3px solid #fff5ef;
-    background-color: #fff5ef;
+/* border: 3px solid white;
+background-color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-direction: column; */
+    border: 3px solid white;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    border-bottom: 3px solid #c0d4c7;
+    letter-spacing: .05em;
 }  
 
+
 .nav_links{
+    font-size: 18px; 
     display: flex;
-    flex-wrap: row wrap;
-    justify-content: space-between;
-    align-items: space-between;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+}
+
+nav ul{
+    list-style: none
+    margin: 0 2px;
+    padding: 0;
+  }
+  
+  nav li {
+     display: inline-block;
+     padding: 5px 5px;
+  }
+  
+  nav a {
+    font-weight: normal;
+    padding: 10px 5px;
+    font-size: .80em;
+  }
+
+#opening {
+    font-size: 20px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    letter-spacing: .05em;
+}
+
+
+#p {
+    font-size: 28px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 60px;
     text-align: center;
-    flex-direction: column;
-    font-size: 18px;
+    line-height: 1.5em;
+}
+
+#pelab {
+    font-size: 24px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    text-align: center;
+    line-height: 1.5em;
 }
 
 body{
@@ -63,13 +115,14 @@ footer {
     overflow: hidden;
     bottom: 0;
     font-size: 10px;
-    background:#f5d2b2;
-    border: 3px solid #f5d2b2;
+    background:black;
+    border: 3px solid black;
     width: 100%;
+    color: white;
 }
 
 #skip {
-    overflow: hidden;
+    display: hidden;
 }
 
 
@@ -93,22 +146,31 @@ footer {
     
 
 #mtp, #bh, #gd {
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 20%;
     width: 100px; 
     text-align: center;
 }
 
-div.mtp, div.gd {
-    background-color: #fff5ef;
+div.mtp, div.gd{
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: row wrap;
     justify-content: space-between;
     text-align: center;
     flex-direction: column;
     align-items: center;
+    border: 3px solid #c0d4c7;
+    background-color: #c0d4c7;
 }
 
+
+
 div.brag.house {
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: row wrap;
     justify-content: space-between;
@@ -118,16 +180,25 @@ div.brag.house {
 }
 
 button {
-    color:black; 
-    font: bold;
-    background-color:#fff5ef; 
-    border:1px solid; 
+    color: white; 
+    font-size: 16px;
+    border:1px solid black; 
+    padding: 16px 16px;
+    background-color: black;
     border-color: black; 
-    border-radius: 5%;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
+
+button:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
 
 #title1, #title12, #title2, #title3 {
     text-align: center;
+    margin: 20px;
+    font-size: 17px;
 }
 
 #message {
@@ -171,10 +242,59 @@ button {
     
 }
 
+#miaturco {
+    text-align: center;
+}
+
 #portfolio, #graphictitle {
     padding: 30px
 }
 
-#titlebh {
-    background-color: none;
+#titlebh, #title2 {
+    margin-top: 20px;
+}
+
+
+#bhwebsite, #mtpwebsite, #sopranospic {
+    margin-top: 30px;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  
+#miaturco {
+    margin: 0 auto;
 }
