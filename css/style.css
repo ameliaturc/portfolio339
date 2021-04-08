@@ -12,18 +12,12 @@
 }
 
 header{
-/* border: 3px solid white;
-background-color: white;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-direction: column; */
     border: 3px solid white;
     background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     border-bottom: 3px solid #c0d4c7;
     letter-spacing: .05em;
 }  
@@ -40,15 +34,15 @@ flex-direction: column; */
 }
 
 nav ul{
-    list-style: none
+    list-style: none;
     margin: 0 2px;
     padding: 0;
-  }
+}
   
   nav li {
      display: inline-block;
      padding: 5px 5px;
-  }
+}
   
   nav a {
     font-weight: normal;
@@ -191,7 +185,11 @@ button {
 }
 
 button:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+/*     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ */
+    transform:scale(1.07,1.07);
+    -webkit-transform:scale(1.07,1.07);
+    -moz-transform:scale(1.07,1.07);
 }
 
 
@@ -243,7 +241,20 @@ button:hover {
 }
 
 #miaturco {
+    display: block;
     text-align: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 500px;
+    width: 500px;
+    padding-right: 50px;
+}
+
+#bhlogo {
+    display: block;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 #portfolio, #graphictitle {
@@ -279,6 +290,60 @@ button:hover {
     width: 100%;
   }
   
+  
+  .aboutpic {
+    display: flex;
+    padding: 20px;
+    padding-right: 20px;
+    flex-direction: column;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 80px;
+    margin-top: 30px;
+}
+
+#envelope, #linkedin {
+    border: 100px solid #c0d4c7;
+    background-color: #c0d4c7;
+}
+
+#envelope:hover, #linkedin:hover {
+    box-shadow: 10px 10px;
+}
+
+#linkedin {
+    margin-bottom: 40px;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+.bg-image {
+    /* Full height */
+    height: 50%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+  
+  /* Images used */
+  .img1 { background-image: url("images/mtp/1.jpg"); }
+  .img2 { background-image: url("images/mtp/2.jpg"); }
+  .img3 { background-image: url("images/mtp/3.jpg"); }
+  .img4 { background-image: url("images/mtp/4.jpg"); }
+  .img5 { background-image: url("images/mtp/5.jpg"); }
+  .img6 { background-image: url("images/mtp/6.jpg"); }
+  .img7 { background-image: url("images/mtp/7.jpg"); }
+
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
     .column {
@@ -288,13 +353,79 @@ button:hover {
   }
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
+  @media screen and (min-width: 600px) {
     .column {
       flex: 100%;
       max-width: 100%;
     }
+
+    header{
+        border: 3px solid white;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        border-bottom: 3px solid #c0d4c7;
+        letter-spacing: .05em;
+    }  
+    
+    
+    .nav_links{
+        font-size: 18px; 
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+        width: 100%;
+    }
+    
+    nav ul{
+        list-style: none;
+        margin: 0 2px;
+        padding: 0;
+    }
+
+    .message {
+        flex-direction: row;
+        padding-top: 50px;
+        padding-bottom: 85px
+    }
+
+    .aboutpic {
+        flex-direction: row;
+    }
+
+    #linkedin {
+        margin-bottom: 0px;
+    }
+
   }
+
+#opening {
+    animation-name: logo_grow;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
   
-#miaturco {
-    margin: 0 auto;
-}
+ }
+
+ #p {
+     animation-name: logo_grow;
+     animation-duration: 3s;
+     animation-iteration-count: 1;
+     animation-delay: 2s;
+ }
+ 
+ /*Keyframes for animation*/
+ @-webkit-keyframes logo_grow{
+   /*Your code here.*/
+   from {
+     opacity: 0;
+   }
+   to {
+     opacity: 1;
+   }
+ 
+ }
+ 
