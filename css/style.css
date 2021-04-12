@@ -228,7 +228,7 @@ button:hover {
     row-gap: 20px;
 }
 
-#mtpelab, #mtpmore, #bhelab, #bhmore {
+#mtpelab, #mtpmore, #bhelab, #bhmore, #bhmas {
     padding: 25px;
     display: flex;
     flex-wrap: wrap;
@@ -248,13 +248,7 @@ button:hover {
     height: 500px;
     width: 500px;
     padding-right: 50px;
-}
 
-#bhlogo {
-    display: block;
-    text-align: center;
-    align-items: center;
-    margin: 0 auto;
 }
 
 #portfolio, #graphictitle {
@@ -266,10 +260,9 @@ button:hover {
 }
 
 
-#bhwebsite, #mtpwebsite, #sopranospic {
+#mtpwebsite, #titlebh, #titlegd, #sopranospic, #mtptitleindex {
     margin-top: 30px;
 }
-
 
 .row {
     display: flex;
@@ -308,7 +301,11 @@ button:hover {
 }
 
 #envelope, #linkedin {
-    border: 100px solid #c0d4c7;
+    border: 50px solid #c0d4c7;
+    background-color: #c0d4c7;
+    width: 250px;
+    height: 250px;
+    border: 50px solid #c0d4c7;
     background-color: #c0d4c7;
 }
 
@@ -323,26 +320,41 @@ button:hover {
 * {
     box-sizing: border-box;
   }
-  
-.bg-image {
-    /* Full height */
-    height: 50%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
+
+#bhwebsitepic {
+    margin: auto;
+    display: block;
 }
-  
-  /* Images used */
-  .img1 { background-image: url("images/mtp/1.jpg"); }
-  .img2 { background-image: url("images/mtp/2.jpg"); }
-  .img3 { background-image: url("images/mtp/3.jpg"); }
-  .img4 { background-image: url("images/mtp/4.jpg"); }
-  .img5 { background-image: url("images/mtp/5.jpg"); }
-  .img6 { background-image: url("images/mtp/6.jpg"); }
-  .img7 { background-image: url("images/mtp/7.jpg"); }
+
+#image1, #image2, #image3, #image4, #image5, #image6, #image7, #image8 {
+    max-width: 80%;
+    height: auto;
+    border: 10px solid #c0d4c7;
+    background-color: #c0d4c7;
+    padding: 10px;
+
+}
+
+#gd1, #gd2,#gd3, #gd4, #gd5, #gd6, #gd7, #gd8, #gd9, #gd10 {
+    width: 80%;
+    height: auto;
+    border: 10px solid #c0d4c7;
+    background-color: #c0d4c7;
+    padding: 10px;
+} 
+
+.bg-image, .container {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin: 0;
+    gap: 30px;
+    padding: 0;
+    align-self: center;
+    justify-self: center;
+    place-items: center;
+    padding-bottom: 40px
+}
 
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
@@ -354,6 +366,10 @@ button:hover {
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (min-width: 600px) {
+    .bg-image, .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    } 
+
     .column {
       flex: 100%;
       max-width: 100%;
@@ -405,19 +421,12 @@ button:hover {
 
 #opening {
     animation-name: logo_grow;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-iteration-count: 1;
   
  }
-
- #p {
-     animation-name: logo_grow;
-     animation-duration: 3s;
-     animation-iteration-count: 1;
-     animation-delay: 2s;
- }
  
- /*Keyframes for animation*/
+/*  /*Keyframes for animation*/
  @-webkit-keyframes logo_grow{
    /*Your code here.*/
    from {
