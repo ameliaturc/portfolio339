@@ -11,6 +11,11 @@
     font-size: 2em;
 }
 
+#atlogo {
+    width: 160px;
+    height: 60px;
+}
+
 header{
     border: 3px solid white;
     background-color: white;
@@ -115,9 +120,22 @@ footer {
     color: white;
 }
 
-#skip {
-    display: hidden;
-}
+a.skip{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  
+  a.skip:focus{
+    top:20px;
+    color: black;
+    text-decoration-style: solid;
+  }
 
 
 #p, #p2 {
@@ -264,13 +282,27 @@ button:hover {
     margin-top: 30px;
 }
 
+#sopranospic {
+    height: 50%;
+    width: 50%;
+}
+
+#mtpwebsite {
+    width: 80%;
+    height: 80%;
+}
+
+#atlogo {
+    width: 160px;
+    height: 60px;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
   }
   
-  /* Create four equal columns that sits next to each other */
   .column {
     flex: 25%;
     max-width: 25%;
@@ -326,7 +358,12 @@ button:hover {
     display: block;
 }
 
-#image1, #image2, #image3, #image4, #image5, #image6, #image7, #image8 {
+#bhwebsite {
+    height: 80%;
+    width: 80%;
+}
+
+#image1, #image2, #image3, #image4, #image5, #image6, #image7, #image8, #image9, #image10, #image11, #image12 {
     max-width: 80%;
     height: auto;
     border: 10px solid #c0d4c7;
@@ -338,8 +375,8 @@ button:hover {
 #gd1, #gd2,#gd3, #gd4, #gd5, #gd6, #gd7, #gd8, #gd9, #gd10 {
     width: 80%;
     height: auto;
-    border: 10px solid #c0d4c7;
-    background-color: #c0d4c7;
+    border: 10px solid black;
+    background-color: black;
     padding: 10px;
 } 
 
@@ -356,7 +393,6 @@ button:hover {
     padding-bottom: 40px
 }
 
-  /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
     .column {
       flex: 50%;
@@ -364,7 +400,6 @@ button:hover {
     }
   }
   
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
   @media screen and (min-width: 600px) {
     .bg-image, .container {
         grid-template-columns: 1fr 1fr 1fr;
@@ -426,9 +461,7 @@ button:hover {
   
  }
  
-/*  /*Keyframes for animation*/
  @-webkit-keyframes logo_grow{
-   /*Your code here.*/
    from {
      opacity: 0;
    }
@@ -437,4 +470,11 @@ button:hover {
    }
  
  }
+
+ @media screen and (prefers-reduced-motion: reduce) {
+    #opening {
+      animation: none;
+    }
+  }
+  
  
